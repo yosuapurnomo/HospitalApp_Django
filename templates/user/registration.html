@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1 class="text-center">Registration Pasien</h1>
+        <form method="post", autocomplete="off">
+            {% for f in form %}
+                <div class="mb-3">
+                    {{f.label}}
+                    {{f}}
+{#                     <label for="exampleInputEmail1" class="form-label">Email address</label> #}
+                    {# <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> #}
+                </div>
+            {% endfor %}
+          
+          
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+{% endblock content %}
