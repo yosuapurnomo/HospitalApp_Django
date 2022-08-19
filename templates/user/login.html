@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+	<div class="container">
+		<h1>Login</h1>
+		<form method="post", autocomplete="off">
+			{{message}}
+			{% csrf_token %}
+			{% for f in form %}
+				<div class="mb-3">
+					{{f.label}}
+					{{f}}
+				</div>
+			{% endfor %}
+			<button type="submit" class="btn btn-primary">Login</button>
+			<a href="{% url "user:regisPasien" %}">Register</a>
+		</form>
+	</div>
+
+{% endblock content %}
